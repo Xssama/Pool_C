@@ -1,8 +1,14 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdbool.h>
 
 int sqrt_n(float n) {
-    return floor(sqrt(n));
+   int i= 1;
+    while (true) {
+        if ((i*i) <= n && (i+1)*(i+1) > n) {
+            return i;
+        }
+        i++;
+    }
 }
 
 int main() {
